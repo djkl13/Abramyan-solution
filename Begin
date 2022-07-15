@@ -1,0 +1,455 @@
+using System;
+
+namespace Begin
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Begin1();
+        }
+
+        static void Begin1()
+        {
+            int a = 4;
+            int p = 4 * a;
+            Console.WriteLine(p);
+        }
+        static void Begin2()
+        {
+            int a = 4;
+            int s = a * a;
+            Console.WriteLine(s);
+        }
+        static void Begin3()
+        {
+            int a = 6;
+            int b = 4;
+            int s;
+            int p;
+            s = a * b;
+            p = 2 * (a + b);
+            Console.WriteLine(s);
+            Console.WriteLine(p);
+        }
+        static void Begin4()
+        {
+            double d = 5;
+            double l = Math.PI * d;
+            Console.WriteLine(l);
+        }
+        static void Begin5()
+        {
+            int a1 = 4;
+            int v = a1 * a1 * a1;
+            int s = 6 * (a1 * a1);
+            Console.WriteLine(v);
+            Console.WriteLine(s);
+
+        }
+        static void Begin6()
+        {
+            int a = 5;
+            int b = 4;
+            int c = 6;
+            int v;
+            int s;
+            v = a * b * c;
+            s = 2 * ((a * b) + (b * c) + (a * c));
+            Console.WriteLine(v);
+            Console.WriteLine(s);
+        }
+
+        static void Begin7()
+        {
+            double l;
+            double s;
+            double r = 5;
+            double p = Math.PI;
+            l = 2 * p * r;
+            s = p * (r * r);
+            Console.WriteLine(l);
+            Console.WriteLine(s);
+        }
+        static void Begin8()
+        {
+            int a = 5;
+            int b = 6;
+            int average;
+            average = (a + b) / 2;
+            Console.WriteLine(average);
+        }
+        static void Begin9()
+        {
+            int a = 20;
+            int b = 10;
+            int ab = a * b;
+            int sqrt;
+            sqrt = Convert.ToInt32(Math.Sqrt(ab));
+            Console.WriteLine(sqrt);
+        }
+        static void Begin10()
+        {
+            int a = 6;
+            int b = 5;
+            int sum;
+            int minus;
+            int multi;
+            sum = Convert.ToInt32(Math.Pow(a, 2)) + Convert.ToInt32(Math.Pow(b, 2));
+            minus = Convert.ToInt32(Math.Pow(a, 2)) - Convert.ToInt32(Math.Pow(b, 2));
+            multi = Convert.ToInt32(Math.Pow(a, 2)) * Convert.ToInt32(Math.Pow(b, 2));
+            Console.WriteLine(sum);
+            Console.WriteLine(minus);
+            Console.WriteLine(multi);
+        }
+        static void Begin10_2()
+        {
+            int a = 6;
+            int b = 5;
+
+            //int a2 = Convert.ToInt32(Math.Pow(a, 2));
+            //int b2 = Convert.ToInt32(Math.Pow(b, 2));
+            int a2 = a * a;
+            int b2 = b * b;
+
+            int sum = a2 + b2;
+            int minus = a2 - b2;
+            int multi = a2 * b2;
+
+            Console.WriteLine(sum);
+            Console.WriteLine(minus);
+            Console.WriteLine(multi);
+        }
+        static void Begin11()
+        {
+            int a = -6;
+            int b = -5;
+            int Module =  32;
+            int sum = Convert.ToInt32(Math.Abs(a)) + Convert.ToInt32(Math.Abs(b));
+            int minus = Convert.ToInt32(Math.Abs(a)) - Convert.ToInt32(Math.Abs(b));
+            int multi = Convert.ToInt32(Math.Abs(a)) * Convert.ToInt32(Math.Abs(b));
+            Console.WriteLine(sum);
+            Console.WriteLine(minus);
+            Console.WriteLine(multi);
+
+        }
+        static void Begin12()
+        {
+            int a = 4;
+            int b = 6;
+            int d = Convert.ToInt32(Math.Pow(a, 2)) + Convert.ToInt32(Math.Pow(b, 2));
+            double c;
+            double p;
+            c = Math.Sqrt(d);
+            p = a + b + c;
+            Console.WriteLine(c);
+            Console.WriteLine(p);
+        }
+        static void Begin13()
+        {
+            int r1 = 10;
+            int r2 = 5;
+            int s1;
+            int s2;
+            int s3;
+            s1 = Convert.ToInt32(Math.PI) * Convert.ToInt32(Math.Pow(r1, 2));
+            s2 = Convert.ToInt32(Math.PI) * Convert.ToInt32(Math.Pow(r2, 2));
+            s3 = s1 - s2;
+            Console.WriteLine(s1);
+            Console.WriteLine(s2);
+            Console.WriteLine(s3);
+        }
+        static void Begin14()
+        {
+            int l = 9;
+            int r = 4;
+            l = 2 * Convert.ToInt32(Math.PI) * r;
+        }
+        static void Begin15()
+        {
+            int s;
+            int l;
+            int r = 4;
+            l = 2 * Convert.ToInt32(Math.PI) * r;
+            s = Convert.ToInt32(Math.PI) * Convert.ToInt32(Math.Pow(r, 2));
+            Console.WriteLine(l);
+            Console.WriteLine(s);
+        }
+        static void Begin16()
+        {
+            int x1 = 5;
+            int x2 = -1;
+            int a;
+            a = Convert.ToInt32(Math.Abs(x1 - x2));
+            Console.WriteLine(a);
+        }
+        static void Begin17()
+        {
+            int a = 4;
+            int b = 5;
+            int c = 6;
+            int ac;
+            int bc;
+            int sum;
+            ac = Math.Abs(a - c);
+            bc = Math.Abs(b - c);
+            sum = ac + bc;
+            Console.WriteLine(ac);
+            Console.WriteLine(bc);
+            Console.WriteLine(sum);
+
+        }
+        static void Begin18()
+        {
+            int a = 4;
+            int b = 6;
+            int c = 5;
+            int ac;
+            int bc;
+            int multi;
+            ac = Math.Abs(a - c);
+            bc = Math.Abs(b - c);
+            multi = ac * bc;
+            Console.WriteLine(ac);
+            Console.WriteLine(bc);
+            Console.WriteLine(multi);
+        }
+        static void Begin19()
+        {
+            int x1 = 10;
+            int y1 = 2;
+            int x2 = 5;
+            int y2 = 1;
+            int p = 2 * (Math.Abs(x1 - x2) + Math.Abs(y1 - y2));
+            int s = Math.Abs(x1 - x2) * Math.Abs(y1 - y2);
+            Console.WriteLine(p);
+            Console.WriteLine(s);
+        }
+        static void Begin20()
+        {
+            int x1 = 5;
+            int y1 = 2;
+            int x2 = 10;
+            int y2 = 4;
+            int distance = Convert.ToInt32(Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
+            Console.WriteLine(distance);
+
+        }
+        static void Begin21()
+        {
+            int x1 = 20;
+            int y1 = 8;
+            int x2 = 10;
+            int y2 = 4;
+            int x3 = 5;
+            int y3 = 2;
+            int a = Convert.ToInt32(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)));
+            int b = Convert.ToInt32(Math.Sqrt(Math.Pow(x2 - x3, 2) + Math.Pow(y2 - y3, 2)));
+            int c = Convert.ToInt32(Math.Sqrt(Math.Pow(x3 - x1, 2) + Math.Pow(y3 - y1, 2)));
+            int p = (a + b + c) / 2;
+            int s = Convert.ToInt32(Math.Sqrt(p * (p - a) * (p - b) * (p - c)));
+            Console.WriteLine(p);
+            Console.WriteLine(s);
+        }
+        static void Begin22()
+        {
+            int a = 2;
+            int b = 1;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+
+        static void Begin_22()
+        {
+            int a = 2;
+            int b = 1;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            (a, b) = (b, a);
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+        static void Begin23()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 3;
+            a = a + b + c;
+            b = a - b - c;
+            c = a - b - c;
+            a = a - b - c;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+        }
+        static void Begin24()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 3;
+
+            a = a + c;
+            c = a - c;
+            a = a - c;
+            b = b + a;
+            a = b - a;
+            b = b - a;
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+        }
+        static void Begin25()
+        {
+            int x = 5;
+            int y = 3 * Convert.ToInt32(Math.Pow(x, 6) - 6 * Math.Pow(x, 2) - 7);
+            Console.WriteLine(y);
+        }
+        static void Begin26()
+        {
+            int x = 5;
+            int y = (4 * Convert.ToInt32(Math.Pow(x - 3, 2))) - (7 * Convert.ToInt32(Math.Pow(x - 3, 3))) + 2;
+            Console.WriteLine(y);
+        }
+        static void Begin27()
+        {
+            int a = 5;
+            int a2 = a * a;
+            int a4 = a2 * a2;
+            int a8 = a4 * a4;
+            Console.WriteLine(a);
+            Console.WriteLine(a2);
+            Console.WriteLine(a4);
+            Console.WriteLine(a8);
+
+        }
+        static void Begin28()
+        {
+            int a = 5;
+            int a2 = a * a;
+            int a3 = a2 * a;
+            int a5 = a3 * a2;
+            int a10 = a5 * a5;
+            int a15 = a10 * a5;
+            Console.WriteLine(a);
+            Console.WriteLine(a2);
+            Console.WriteLine(a3);
+            Console.WriteLine(a5);
+            Console.WriteLine(a10);
+            Console.WriteLine(a15);
+
+        }
+        static void Begin29()
+        {
+            int a = 260;
+            Console.WriteLine(a * Convert.ToInt32(Math.PI) / 180);
+        }
+        static void Begin30()
+        {
+            int a = 260;
+            Console.WriteLine((a * 180) / Convert.ToInt32(Math.PI));
+        }
+        static void Begin31()
+        {
+            float tf = 60;
+            float tc = (tf - 32) * 5 / 9;
+            Console.WriteLine(tf + " " + tc);
+        }
+        static void Begin32()
+        {
+            float tc = 20;
+            float tf = 9 / 5 * (tc + 32);
+            Console.WriteLine(tc + " " + tf);
+        }
+        static void Begin33()
+        {
+            int x = 20;
+            int a = 600;
+            int y = 4;
+            float price = a / x;
+            Console.WriteLine(price + " " + y * price);
+        }
+        static void Begin34()
+        {
+            int x = 20;
+            int a = 600;
+            int y = 4;
+            int b = 200;
+            float ChocolatePrise = a / x;
+            float CandyPrise = b / y;
+            Console.WriteLine(CandyPrise);
+            Console.WriteLine(ChocolatePrise / CandyPrise);
+        }
+        static void Begin35()
+        {
+            int v = 50;
+            int u = 20;
+            int t1 = 1;
+            int t2 = 2;
+            int s;
+            s = v * t1 + (v - u) * t2;
+            Console.WriteLine(s);
+        }
+        static void Begin36()
+        {
+            int v1 = 40;
+            int v2 = 50;
+            int s = 200;
+            int t = 2;
+            Console.WriteLine(s + v1 * t + v2 * t);
+        }
+        static void Begin37()
+        {
+            int v1 = 60;
+            int v2 = 50;
+            int s = 300;
+            int t = 3;
+            Console.WriteLine(Convert.ToInt32(Math.Abs(s - (v1 * t + v2 * t))));
+        }
+        static void Begin38()
+        {
+            int a = 6;
+            int b = 3;
+            Console.WriteLine(-b / a);
+        }
+        static void Begin39()
+        {
+            int a = 6;
+            int b = 3;
+            int c = 9;
+            int x1;
+            int x2;
+            int d = Convert.ToInt32(Math.Pow(b, 2) - 4 * a * c);
+            x1 = -b + Convert.ToInt32(Math.Sqrt(d)) / (2 * a);
+            x2 = -b - Convert.ToInt32(Math.Sqrt(d)) / (2 * a);
+            if (x1 < x2)
+            {
+                Console.WriteLine(x1 + " " + x2);
+            }
+            else
+            {
+                Console.WriteLine(x2 + " " + x1);
+            }
+        }
+        static void Begin40()
+        {
+            int a1 = 2;
+            int b1 = 4;
+            int c1 = 8;
+            int a2 = 3;
+            int b2 = 6;
+            int c2 = 12;
+            int d = (a1 * b2) - (a2 * b1);
+            int x = (c1 * b2 - c2 * b1) / d;
+            int y = (a1 * c2 - a2 * c1) / d;
+            Console.WriteLine(x + " " + y);
+
+        }
+    }
+}
