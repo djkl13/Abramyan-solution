@@ -1,0 +1,990 @@
+using System;
+
+namespace Case
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Case20();
+        }
+        static void Case1()
+        {
+            int a = 3;
+            switch (a)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tursday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("");
+                    break;
+            }
+        }
+        static void Case2()
+        {
+            int K = 6;
+            switch (K)
+            {
+                case 1:
+                    Console.WriteLine("плохо");
+                    break;
+                case 2:
+                    Console.WriteLine("неудовлетворительно");
+                    break;
+                case 3:
+                    Console.WriteLine("удовлетворительно");
+                    break;
+                case 4:
+                    Console.WriteLine("хорошо");
+                    break;
+                case 5:
+                    Console.WriteLine("отлично");
+                    break;
+                default:
+                    Console.WriteLine("ошибка");
+                    break;
+            }
+        }
+        static void Case3()
+        {
+            int MonthNum = 4;
+            switch (MonthNum)
+            {
+                case 1:
+                case 2:
+                case 12:
+                    Console.WriteLine("Зима");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    Console.WriteLine("Весна");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    Console.WriteLine("Лето");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    Console.WriteLine("Осень");
+                    break;
+
+                default:
+                    Console.WriteLine("Неправильный ввод");
+                    break;
+
+            }
+        }
+        static void Case4()
+        {
+            int MonthNum = 5;
+            switch (MonthNum)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    Console.WriteLine(31);
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    Console.WriteLine(30);
+                    break;
+                case 2:
+                    Console.WriteLine(28);
+                    break;
+                default:
+                    Console.WriteLine("Error");
+                    break;
+
+            }
+        }
+        static void Case5()
+        {
+            int A = 2;
+            int B = 3;
+            int N = 3;
+            switch (N)
+            {
+                case 1:
+                    Console.WriteLine(A + B);
+                    break;
+                case 2:
+                    Console.WriteLine(A - B);
+                    break;
+                case 3:
+                    Console.WriteLine(A * B);
+                    break;
+                case 4:
+                    Console.WriteLine(A / B);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect");
+                    break;
+            }
+        }
+        static void Case6()
+        {
+            int N = 1;
+            int L = 3;
+            switch (N)
+            {
+                case 1:
+                    Console.WriteLine(L / 10.0);
+                    break;
+                case 2:
+                    Console.WriteLine(L * 1000);
+                    break;
+                case 3:
+                    Console.WriteLine(L);
+                    break;
+                case 4:
+                    Console.WriteLine(L / 1000.0);
+                    break;
+                case 5:
+                    Console.WriteLine(L / 100.0);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect");
+                    break;
+            }
+        }
+        static void Case7()
+        {
+            int N = 2;
+            int m = 1000;
+            switch (N)
+            {
+                case 1:
+                    Console.WriteLine(m);
+                    break;
+                case 2:
+                    Console.WriteLine(m / 1000000.0);
+                    break;
+                case 3:
+                    Console.WriteLine(m / 1000.0);
+                    break;
+                case 4:
+                    Console.WriteLine(m * 1000);
+                    break;
+                case 5:
+                    Console.WriteLine(m * 100);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect");
+                    break;
+            }
+        }
+        static void Case8()
+        {
+            int D = 1;
+            int M = 1;
+            if (D == 1)
+            {
+                M--;
+                if (M == 0)
+                {
+                    M = 12;
+                }
+                switch (M)
+                {
+                    case 1:
+                    case 2:
+                    case 4:
+                    case 6:
+                    case 8:
+                    case 9:
+                    case 11:
+                        Console.WriteLine("31." + (M));
+                        break;
+                    case 3:
+                        Console.WriteLine("28." + (M));
+                        break;
+                    case 5:
+                    case 7:
+                    case 10:
+                    case 12:
+                        Console.WriteLine("30." + (M));
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine(D - 1 + "." + M);
+            }
+
+        }
+        static void Case9()
+        {
+            int D = 31;
+            int M = 12;
+            switch (M)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if (D == 31)
+                    {
+                        Console.WriteLine("1." + ((M == 12) ? 1 : M + 1));
+                    }
+                    else
+                    {
+                        Console.WriteLine(++D + "." + M);
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if (D == 30)
+                    {
+                        Console.WriteLine("1." + ((M == 12) ? 1 : M + 1));
+                    }
+                    else
+                    {
+                        Console.WriteLine(++D + "." + M);
+                    }
+                    break;
+                case 2:
+                    if (D == 28)
+                    {
+                        Console.WriteLine("1." + ((M == 12) ? 1 : M + 1));
+                    }
+                    else
+                    {
+                        Console.WriteLine(++D + "." + M);
+                    }
+                    break;
+
+            }
+        }
+        static void Case10()
+        {
+            int n = 1;
+            char c = 'n';
+            switch (n)
+            {
+                case 0:
+                    Console.WriteLine(c);
+                    break;
+                case 1:
+                    switch (c)
+                    {
+                        case 'n':
+                            Console.WriteLine("W");
+                            break;
+                        case 'w':
+                            Console.WriteLine("S");
+                            break;
+                        case 's':
+                            Console.WriteLine("E");
+                            break;
+                        case 'e':
+                            Console.WriteLine("N");
+                            break;
+                    }
+                    break;
+                case -1:
+                    switch (c)
+                    {
+                        case 'n':
+                            Console.WriteLine('E');
+                            break;
+                        case 'e':
+                            Console.WriteLine('S');
+                            break;
+                        case 's':
+                            Console.WriteLine('W');
+                            break;
+                        case 'w':
+                            Console.WriteLine('N');
+                            break;
+                    }
+                    break;
+            }
+
+        }
+        static void Case11()
+        {
+            int n1 = 2;
+            int n2 = -1;
+            char c = 's';
+            switch (n1)
+            {
+                case 1:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'e';
+                            break;
+                        case 'e':
+                            c = 'n';
+                            break;
+                    }
+                    break;
+                case -1:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 'e';
+                            break;
+                        case 'e':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 'n';
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'n';
+                            break;
+                        case 'e':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 'e';
+                            break;
+
+                    }
+                    break;
+            }
+            switch (n2)
+            {
+                case 1:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'e';
+                            break;
+                        case 'e':
+                            c = 'n';
+                            break;
+                    }
+                    break;
+                case -1:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 'e';
+                            break;
+                        case 'e':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 'n';
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (c)
+                    {
+                        case 'n':
+                            c = 's';
+                            break;
+                        case 's':
+                            c = 'n';
+                            break;
+                        case 'e':
+                            c = 'w';
+                            break;
+                        case 'w':
+                            c = 'e';
+                            break;
+
+                    }
+                    break;
+            }
+            Console.WriteLine(c);
+        }
+        static void Case12()
+        {
+            int n = 1;
+            double x = 3;
+            double r = 0;
+            double d = 0;
+            double l = 0;
+            double s = 0;
+            switch (n)
+            {
+                case 1:
+                    r = x;
+                    d = 2 * r;
+                    l = 2 * 3.14 * r;
+                    s = 3.14 * r * r;
+                    break;
+                case 2:
+                    r = x / 2;
+                    d = x;
+                    l = 2 * 3.14 * r;
+                    s = 3.14 * r * r;
+                    break;
+                case 3:
+                    r = x / 2 * 3.14;
+                    d = 2 * r;
+                    l = x;
+                    s = 3.14 * r * r;
+                    break;
+                case 4:
+                    r = Math.Sqrt(x / 3.14);
+                    d = 2 * r;
+                    l = 2 * 3.14 * r;
+                    s = x;
+                    break;
+            }
+            Console.WriteLine("r = " + r + "d = " + d + "l = " + l + "s = " + s);
+        }
+        static void Case13()
+        {
+            int n = 3;
+            double x = 3;
+            double a = 3;
+            double c = 6;
+            double h = 5;
+            double s = 4;
+            switch (n)
+            {
+                case 1:
+                    a = x;
+                    c = a * Math.Sqrt(2);
+                    h = c / 2;
+                    s = c * h / 2;
+                    break;
+                case 2:
+                    c = x;
+                    a = c / Math.Sqrt(2);
+                    h = c / 2;
+                    s = c * h / 2;
+                    break;
+                case 3:
+                    h = x;
+                    c = 2 * h;
+                    a = c / Math.Sqrt(2);
+                    s = c * h / 2;
+                    break;
+                case 4:
+                    s = x;
+                    h = Math.Sqrt(s);
+                    c = 2 * h;
+                    a = c / Math.Sqrt(2);
+                    break;
+            }
+            Console.WriteLine(a + " " + c + " " + h + " " + s);
+        }
+        static void Case14()
+        {
+            int n = 3;
+            double x = 2;
+            double a = 0;
+            double r1 = 0;
+            double r2 = 0;
+            double s = 0;
+            switch (n)
+            {
+                case 1:
+                    a = x;
+                    r1 = a * Math.Sqrt(3) / 6.0;
+                    r2 = 2 * r1;
+                    s = a * a * Math.Sqrt(3) / 4;
+                    break;
+                case 2:
+                    r1 = x;
+                    a = r1 * 6 / Math.Sqrt(3);
+                    r2 = 2 * r1;
+                    s = a * a * Math.Sqrt(3) / 4;
+                    break;
+                case 3:
+                    r2 = x;
+                    r1 = r2 / 2.0;
+                    a = r1 * 6 / Math.Sqrt(3);
+                    s = a * a * Math.Sqrt(3) / 4.0;
+                    break;
+                case 4:
+                    s = x;
+                    a = Math.Sqrt(s * 4 / Math.Sqrt(3));
+                    r1 = a * Math.Sqrt(3) / 6;
+                    r2 = 2 * r1;
+                    break;
+            }
+            Console.WriteLine(a + " " + r1 + " " + r2 + " " + s);
+        }
+        static void Case15()
+        {
+            int n = 13;
+            int m = 3;
+            switch (n)
+            {
+                case 6:
+                    Console.WriteLine("шестерка");
+                    break;
+                case 7:
+                    Console.WriteLine("семерка");
+                    break;
+                case 8:
+                    Console.WriteLine("восьмерка");
+                    break;
+                case 9:
+                    Console.WriteLine("девятка");
+                    break;
+                case 10:
+                    Console.WriteLine("десятка");
+                    break;
+                case 11:
+                    Console.WriteLine("валет");
+                    break;
+                case 12:
+                    Console.WriteLine("дама");
+                    break;
+                case 13:
+                    Console.WriteLine("король");
+                    break;
+                case 14:
+                    Console.WriteLine("туз");
+                    break;
+            }
+            switch (m)
+            {
+                case 1:
+                    Console.WriteLine("пик");
+                    break;
+                case 2:
+                    Console.WriteLine("треф");
+                    break;
+                case 3:
+                    Console.WriteLine("бубен");
+                    break;
+                case 4:
+                    Console.WriteLine("червей");
+                    break;
+            }
+
+        }
+        static void Case16()
+        {
+            int y = 79;
+            switch(y / 10)
+            {
+                case 2:
+                    Console.WriteLine("двадцать");
+                    break;
+                case 3:
+                    Console.WriteLine("тридцать");
+                    break;
+                case 4:
+                    Console.WriteLine("сорок");
+                    break;
+                case 5:
+                    Console.WriteLine("пятьдесят");
+                    break;
+                case 6:
+                    Console.WriteLine("шестьдесят");
+                    break;
+            }
+            switch(y % 10)
+            {
+                case 0:
+                    Console.WriteLine("лет");
+                    break;
+                case 1:
+                    Console.WriteLine("один год");
+                    break;
+                case 2:
+                    Console.WriteLine("два года");
+                    break;
+                case 3:
+                    Console.WriteLine("три года");
+                    break;
+                case 4:
+                    Console.WriteLine("четыре года");
+                    break;
+                case 5:
+                    Console.WriteLine("пять лет");
+                    break;
+                case 6:
+                    Console.WriteLine("шесть лет");
+                    break;
+                case 7:
+                    Console.WriteLine("семь лет");
+                    break;
+                case 8:
+                    Console.WriteLine("восемь лет");
+                    break;
+                case 9:
+                    Console.WriteLine("девять лет");
+                    break;
+            }
+        }
+        static void Case17()
+        {
+            int n = 40;
+            {
+
+                switch(n / 10)
+                {
+                    
+                    case 1:
+                        Console.WriteLine(n + " учебных заданий ");
+                        break;
+                    case 2:
+                    case 3:
+                        Console.Write(n / 10);
+                        
+                        switch (n % 10)
+                        {
+                            
+                            case 1:
+                                Console.Write(n % 10 + " учебное задание");
+                                break;
+                            case 2:
+                            case 3:
+                            case 4:
+                                Console.Write(n % 10 + " учебных задания");
+                                break;
+                            case 5:
+                            case 6:
+                            case 7:
+                            case 8:
+                            case 9:
+                            case 0: 
+                                Console.Write(n % 10 + " учебных заданий"); 
+                                break; 
+                        }
+                        break;
+                    case 4:
+                        Console.WriteLine("40" + " учебых заданий");
+                        break;
+                        ;
+                }
+            }
+        }
+        static void Case18()
+        {
+            int n = 777;
+            switch(n / 100)
+            {
+                case 1:
+                    Console.Write("сто ");
+                    break;
+                case 2:
+                    Console.Write("двесте" );
+                    break;
+                case 3:
+                    Console.Write("триста ");
+                    break;
+                case 4:
+                    Console.Write("четыреста ");
+                    break;
+                case 5:
+                    Console.Write("пятьсот ");
+                    break;
+                case 6:
+                    Console.Write("шестьсот ");
+                    break;
+                case 7:
+                    Console.Write("семьсот ");
+                    break;
+                case 8:
+                    Console.Write("восемьсот ");
+                    break;
+                case 9:
+                    Console.Write("девьятьсот ");
+                    break;
+            }
+            switch(n / 10 % 10)
+            {
+                case 1:
+                    Console.Write(n % 100);
+                    return;
+                case 2:
+                    Console.Write("двадцать ");
+                    break;
+                case 3:
+                    Console.Write("тридцать ");
+                    break;
+                case 4:
+                    Console.Write("сорок ");
+                    break;
+                case 5:
+                    Console.Write("пятьдесят ");
+                    break;
+                case 6:
+                    Console.Write("шестьдесят ");
+                    break;
+                case 7:
+                    Console.Write("семьдесят ");
+                    break;
+                case 8:
+                    Console.Write("восемьдесят ");
+                    break;
+                case 9:
+                    Console.Write("девяносто ");
+                    break;
+            }
+            switch (n % 10)
+            {
+                case 1:
+                    Console.Write("один");
+                    break;
+                case 2:
+                    Console.Write("два");
+                    break;
+                case 3:
+                    Console.Write("три");
+                    break;
+                case 4:
+                    Console.Write("четыре");
+                    break;
+                case 5:
+                    Console.Write("пять");
+                    break;
+                case 6:
+                    Console.Write("шесть");
+                    break;
+                case 7:
+                    Console.Write("семь");
+                    break;
+                case 8:
+                    Console.Write("восемь");
+                    break;
+                case 9:
+                    Console.Write("девять");
+                    break;
+            }
+        }
+        static void Case19()
+        {
+            int n = 2022;
+            n = n - 1984;
+            Console.Write("год ");
+            switch (n % 5)
+            {
+                case 0:
+                    Console.Write("зелен");
+                    break;
+                case 1:
+                    Console.Write("красн");
+                    break;
+                case 2:
+                    Console.Write("желт");
+                    break;
+                case 3:
+                    Console.Write("бел");
+                    break;
+                case 4:
+                    Console.Write("черн");
+                    break;
+            }
+            switch (n % 12)
+            {
+                case 0:
+                    Console.Write("ой крысы");
+                    break;
+                case 1:
+                    Console.Write("ой коровы");
+                    break;
+                case 2:
+                    Console.Write("ого тигра");
+                    break;
+                case 3:
+                    Console.Write("ого зайца");
+                    break;
+                case 4:
+                    Console.Write("ого дракона");
+                    break;
+                case 5:
+                    Console.Write("ой змейи");
+                    break;
+                case 6:
+                    Console.Write("ой лошади");
+                    break;
+                case 7:
+                    Console.Write("ой овцы");
+                    break;
+                case 8:
+                    Console.Write("ой обезьяны");
+                    break;
+                case 9:
+                    Console.Write("ой курицы");
+                    break;
+                case 10:
+                    Console.Write("ой собаки");
+                    break;
+                case 11:
+                    Console.Write("ой свинйи");
+                    break;
+            }
+        }
+        static void Case20()
+        {
+            int d = 9;
+            int m = 4;
+            switch(m)
+            {
+                case 1:
+                    if(d >= 20)
+                    {
+                        Console.WriteLine("Водолей");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Козерог");
+                    }
+                    break;
+                case 2: 
+                    if (d >= 19)
+                    {
+                        Console.WriteLine("Рыбы");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Водолей");
+                    }
+                    break;
+                case 3:
+                    if (d >= 21)
+                    {
+                        Console.WriteLine("Овен");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Рыбы");
+                    }
+                    break;
+                case 4:
+                    if (d >= 20) 
+                    {
+                        Console.WriteLine("Телец");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Овен");
+                    }
+                    break;
+                case 5:
+                    if (d >= 21)
+                    {
+                        Console.WriteLine("Близнецы");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Телец");
+                    }
+                    break;
+                case 6:
+                    if (d >= 22)
+                    {
+                        Console.WriteLine("Рак");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Близнецы");       
+                    }
+                    break;
+                case 7:
+                    if (d>= 23)
+                    {
+                        Console.WriteLine("Лев");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Рак");
+                    }
+                    break;
+                case 8:
+                    if (d >= 23)
+                    {
+                        Console.WriteLine("Дева");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Лев");
+                    }
+                    break;
+                case 9:
+                    if (d >= 23)
+                    {
+                        Console.WriteLine("Весы");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Дева");
+                    }
+                    break;
+                case 10:
+                    if (d >= 23)
+                    {
+                        Console.WriteLine("Скорпион");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Весы");
+                    }
+                    break;
+                case 11:
+                    if (d >= 23)
+                    {
+                        Console.WriteLine("Стрелец");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Скорпион");
+                    }
+                    break;
+                case 12: 
+                    if (d >= 22)
+                    {
+                        Console.WriteLine("Козерог");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Стрелец");
+                    }
+                    break;
+
+            }
+        }
+    }
+}
+    
