@@ -1,0 +1,555 @@
+using System;
+
+namespace For
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            For41();
+        }   
+        static void For1()
+        {
+            int K = 2;
+            int N = 3;
+            for (int i = 0; i < N; i++)
+            {
+                Console.WriteLine(K);
+            }
+        }
+        static void For2()
+        {
+            int a = 2;
+            int b = 10;
+            int n = 0;
+            for (int i = a; i <= b; i++)
+            {
+                Console.WriteLine(i);
+                n++;
+            }
+            Console.WriteLine(n);
+        }
+        static void For3()
+        {
+            int a = 2;
+            int b = 10;
+            int n = 0;
+            for (int i = b; i >= a; i--)
+            {
+                Console.WriteLine(i);
+                n++;
+            }
+            Console.WriteLine(n);
+        }
+        static void For4()
+        {
+            int cost = 10;
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(cost);
+            }
+        }
+        static void For5()
+        {
+            double cost = 0.1;
+            for (double i = 0.1; i < 1.1; i += 0.1)
+            {
+                Console.WriteLine("Price = " + cost * i);
+            }
+        }
+        static void For6()
+        {
+            double cost = 10;
+            for (double i = 1.2; i <= 2; i += 0.2)
+            {
+                Console.WriteLine("Price = " + Math.Round(cost * i, 2));
+            }
+        }
+        static void For7()
+        {
+            int a = 2;
+            int b = 4;
+            int result = 0;
+            for (int i = a; i <= b; i++)
+            {
+                result += i;
+            }
+            Console.WriteLine("Sum = " + result);
+
+        }
+        static void For8()
+        {
+            int a = 2;
+            int b = 6;
+            long result = 1;
+            for (int i = a; i <= b; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine("Result = " + result);
+        }
+        static void For9()
+        {
+            int a = 2;
+            int b = 4;
+            long result = 0;
+            for (int i = a; i <= b; i++)
+            {
+                result += i * i;
+            }
+            Console.WriteLine("Res = " + result);
+        }
+        static void For10()
+        {
+            int N = 2;
+            double result = 0;
+            for (double i = 1; i <= N; i++)
+            {
+                result += 1 / i;
+            }
+            Console.WriteLine("Res = " + result);
+        }
+        static void For11()
+        {
+            int N = 2;
+            long result = 0;
+            for (int i = 0; i <= N; i++)
+            {
+                result += (N + i) * (N + i);
+            }
+            Console.WriteLine("Res = " + result);
+        }
+        static void For12()
+        {
+            int N = 2;
+            double result = 0;
+
+            for (int i = 1; i <= N; i++)
+            {
+                Console.WriteLine(1 + 0.1 * i);
+                result *= (1 + 0.1 * i);
+            }
+            Console.WriteLine("Res = " + result);
+        }
+        static void For13()
+        {
+            int N = 2;
+            double result = 0;
+            for (int i = 1; i <= N; i++)
+            {
+                result += Math.Pow(-1, i + 1) * (1 + 0.1 * i);
+            }
+            Console.WriteLine("Res = " + result);
+        }
+        static void For14()
+        {
+            int n = 4;
+            int result = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                result += (2 * i - 1);
+            }
+            Console.WriteLine(n + "^2 = " + result);
+        }
+        static void For15()
+        {
+            int n = 5;
+            int a = 3;
+            long result = 1;
+            for (int i = 0; i < n; i++)
+            {
+                result *= a;
+            }
+            Console.WriteLine(result);
+        }
+        static void For16()
+        {
+            int a = 2;
+            int n = 4;
+            long result = 1;
+            for (int i = 0; i < n; i++)
+            {
+                result *= a;
+
+                Console.WriteLine("a^" + (i + 1) + " " + result);
+            }
+        }
+        static void For17()
+        {
+            int a = 2;
+            int n = 4;
+            int sum = 1;
+            int result = 1;     
+            for(int i = 0; i < n; i++)
+            {
+                result *= a;
+                sum += result;
+            }
+            Console.WriteLine(sum);
+        }                           
+        static void For18()
+        {
+            int a = 2;
+            int n = 3;
+            int sum = 1;
+            double result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= a;
+                result *= Math.Pow(-1, i);
+                sum += (int)result;
+            }
+            Console.WriteLine(sum);
+
+        }
+        static void For19()
+        {
+            int n = 6;
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(result);
+        }
+        static void For20()
+        {
+            int n = 6;
+            int result = 1;
+            long sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+                sum += result;
+            }
+            Console.WriteLine(sum); 
+        }
+        static void For21()
+        {
+            int n = 0;
+            int currentNumber = 1;
+            long sum = 1;
+            for(int i = 1; i <= n; i++)
+            {
+                currentNumber *= i;
+                sum += 1 / currentNumber;
+            }
+            Console.WriteLine(sum);
+        }
+        static void For22()
+        {
+            int n = 4;
+            double currentNumber = 1;
+            double sum = 1;
+            int x = 1;
+            int xpown = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                xpown *= x;
+                currentNumber *= i;
+                sum += (xpown / currentNumber);
+            }
+            Console.WriteLine(sum);
+        }
+        static void For23()
+        {
+            int n = 2;
+            int x = 3;
+            int xpown = 1;
+            double sum = 1;
+            double currentNumber = 1;
+            int sign = 1;
+            for (int i = 1; i <= (2 * n + 1); i++)
+            {
+                xpown *= x;
+                currentNumber *= i;
+                if (i % 2 != 0)
+                {
+                    sum += sign * (xpown / currentNumber);
+                    sign *= -1;
+                }
+            }
+            Console.WriteLine(sum);
+        }
+        static void For24()
+        {
+            int x = 1;
+            int n = 1;
+            double result = 1.0;
+            int xpown = 1;
+            int f = 1;
+            
+            for (int i = 1; i <= (2 * n); i++)
+            {
+                xpown *= x;
+                f *= i;
+                double CurrentNum = Math.Pow(-1, i) * xpown / f;
+                result += CurrentNum;
+            }
+            Console.WriteLine(result);
+        }
+        static void For25()
+        {
+            double x = 0.3;
+            int n = 3;
+            double result = 0;
+            double xpow = 1;
+            for(int i = 1; i <= n; i++)
+            {
+                xpow *= x;
+                double Current = ((i - 1 % 2 == 0) ? 1 : -1) * xpow / n;
+                result += Current;
+                
+            }
+            Console.WriteLine(result);
+
+        }
+        static void For26()
+        {
+            double x = 0.5;
+            int n = 5;
+            double result = 0;
+            double xpown = 1;
+            for (int i = 1; i <= (2 * n + 1); i++)
+            {
+                xpown *= x;
+                
+                if(i % 2 == 1)
+                {
+                    double Current = ((i % 2 == 0) ? 1 : -1) * xpown / (2 * i + 1);
+                    result += Current;
+                    
+                }
+            }
+            Console.WriteLine(result);
+        }
+        static void For27()
+        {
+            double x = 0.2;
+            int n = 2;
+            double result = 0;
+            double xpown = 1;
+            double LeftModif = 1;
+            double RightModif = 1;
+            for (int i = 1; i <= (2 * n + 1); i++)
+            {
+                xpown *= x;
+                if (i % 2 == 1)
+                {
+                    LeftModif *= 2 * i - 1;
+                    RightModif *= 2 * i + 1;
+                    double Current = xpown * LeftModif / RightModif;
+                    result += Current;
+                }
+            }
+            Console.WriteLine(result);
+        }
+        static void For28()
+        {
+            double x = 0.7;
+            int n = 7;
+            double result = 1 + x / 2;
+            double xpown = 1;
+            double LeftModif = 1;
+            double RightModif = 2;
+            for(int i = 2; i<=n; i++)
+            {
+                xpown *= x;
+                LeftModif *= 2 * i - 3;
+                RightModif *= 2 * i;
+                double Current = ((i - 1 % 2 == 0) ? 1 : -1) * (xpown * LeftModif / RightModif);
+                result += Current;
+            }
+            Console.WriteLine(result);
+        }
+        static void For29()
+        {
+            double N = 2;
+            int A = 2;
+            int B = 4;
+            double H = (B - A) / (N + 1);
+            Console.WriteLine(H);
+            for (int i = 0; i <= N; i++)
+            {
+                Console.WriteLine(A + i * H);
+            }
+            Console.WriteLine(B - A);
+        }
+        static void For30()
+        {
+            int N = 2;
+            int A = 2;
+            int B = 4;
+            int H = (B - A) / (N + 1);
+            Console.WriteLine(H);
+            for(int i = 0; i <= N; i++)
+            {
+                Console.WriteLine(A + i * H);
+                double current = 1 - Math.Sin(A + i * H);
+                Console.WriteLine(current);
+            } 
+            Console.WriteLine(B - A);
+        }
+        static void For31()
+        {
+
+            float Previos = 2;
+            float Current = 2 + 1 / Previos;
+            int N = 100;
+            Console.WriteLine(Current);
+            for (int i = 0; i < N; i++)
+            {
+                Previos = Current;
+                Current = 2 + 1 / Previos;
+                Console.WriteLine(Current);
+            }
+        }
+        static void For32()
+        {
+            int N = 6;
+            double Previos = 1;
+            double Current = 1;
+            for (int i = 1; i <= N; i++)
+            {
+                Previos = Current;
+                Console.Write("Previos " + Previos + " Current");
+                Current = (Previos + 1 ) / i;
+                Console.WriteLine(Current);
+            }
+        }
+        static void For33()
+        {
+            int N = 7;
+            int F = 1;
+            int Current = 1;
+            int Previous = 1;
+            
+            for (int i = 3; i <= N; i++)
+            {
+                F++;
+                int Temp = Current;
+                Console.WriteLine(Current);
+                Current = Current + Previous;
+                Previous = Temp;
+
+            }
+        }
+        static void For34()
+        {
+            int N = 5;
+            double Current = 2; // A2
+            double Previos = 1;// A1
+            for(int i = 2; i <= N; i++)
+            {
+                double Temp = Current;
+                Console.WriteLine(Current); // print Ai 
+                // Current = Ai; Previous = A(i - 1)
+                // New current = A(i + 1) = Previous + (2 * Current) / 3
+                Current = Previos + (2 * Current) / 3.0; // Current = A(i + 1)
+                Previos = Temp;
+            }
+        }
+        static void For35()
+        {
+            int N = 5;
+            double Current = 3;
+            double Previos = 2;
+            double Previosx2 = 1;
+            Console.WriteLine(Previosx2);
+            Console.WriteLine(Previos);
+            for (int i = 3; i <= N; i++)
+            {
+                double Temp = Current;
+                Console.WriteLine(Current);
+                Current = Current + Previos - (2 * Previosx2);
+                Previosx2 = Previos;
+                Previos = Temp;
+            }
+        }
+        static void For36()
+        {
+            int N = 5;
+            int K = 2;
+            int Sum = 0;
+            for (int i = 1; i <= N; i++)
+            {
+                int Ans = 1;
+                
+                for (int j = 0; j < K; j++)
+                {
+                    Ans *= i;
+                   
+                }
+                Sum += Ans;
+            }
+            Console.WriteLine(Sum);
+        }
+        static void For37()
+        {
+            int N = 3;
+            int Sum = 0;
+            for (int i = 1; i <= N; i++)
+            {
+                int Ans = 1;
+                for(int j = 0; j < i; j++)
+                {
+                    Ans *= i;
+                }
+                Sum += Ans;
+            }
+            Console.WriteLine(Sum);
+        }
+        static void For38()
+        {
+            int N = 5;
+            int Sum = 0; 
+            for(int i = 1; i <= N; i++)
+            {
+                int Ans = 1;
+                for(int j = 1; j <= (N -i + 1); j++)
+                {
+                    Ans *= i;
+                }
+                Sum += Ans;
+            }
+            Console.WriteLine(Sum);
+        }
+        static void For39()
+        {
+            int A = 5;
+            int B = 10;
+            int Sum = 0;
+            for (int i = A; i <= B; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        static void For40()
+        {
+            int A = 2;
+            int B = 6;
+            for (int i = A; i <= B; i++)
+            {
+                for (int j = 1; j <= i - A + 1; j++)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
+        } 
+        static void For41()
+        {
+            long n = 2022;
+            long t = 0;
+            for (int i = 0; i <= n; i++)
+            {
+            t = (1 / 2) * i * (n + 1);
+            }
+            Console.WriteLine(t);
+        }
+    }
+}
