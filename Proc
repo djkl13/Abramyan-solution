@@ -1,0 +1,1046 @@
+using System;
+
+namespace Proc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Proc60();
+        }
+        private static int PowerA3(int A)
+        {
+            int B = (int)Math.Pow(A, 3);
+            return B;
+        }
+        private static void Proc1()
+        {
+            int A = 10;
+            int B = PowerA3(A);
+            Console.WriteLine(B);
+        }
+        private static int PowerA234(int A)
+        {
+            int B = (int)Math.Pow(A, 2);
+            int C = PowerA3(A);
+            int D = (int)Math.Pow(A, 4);
+            return D;
+        }
+        private static void Proc2()
+        {
+            int A = 10;
+            int D = PowerA234(A);
+            Console.WriteLine(D);
+        }
+        private static int InvertDigits(int K)
+        {
+            int K1 = K;
+            int length = 0;
+            int res = 0;
+            while (K1 != 0)
+            {
+                K1 /= 10;
+                length++;
+            }
+            K1 = K;
+            while (K1 != 0)
+            {
+                int num = K1 % 10;
+                res += num * (int)Math.Pow(10, length - 1);
+                K1 /= 10;
+                length--;
+            }
+            return res;
+        }
+        private static void Proc7()
+        {
+            int K = 12345678;
+            Console.WriteLine(InvertDigits(K));
+        }
+        private static int AddRightDigit(int K, int D)
+        {
+            return (K * 10) + D;
+        }
+        private static void Proc8()
+        {
+            int D1 = 1;
+            int D2 = 2;
+            int K = 1234;
+            K = AddRightDigit(K, D1);
+            K = AddRightDigit(K, D2);
+            Console.WriteLine(K);
+        }
+        private static int AddLeftDigit(int K, int D)
+        {
+            int A = InvertDigits(K);
+            A = AddRightDigit(A, D);
+            return InvertDigits(A);
+        }
+        private static void Proc9()
+        {
+            int D1 = 1;
+            int D2 = 2;
+            int K = 1234;
+            K = AddLeftDigit(K, D1);
+            K = AddLeftDigit(K, D2);
+            Console.WriteLine(K);
+        }
+        private static int Min(int X, int Y)
+        {
+            if (X < Y)
+            {
+                return X;
+            }
+            return Y;
+        }
+        private static void Proc11()
+        {
+            int A = 2, B = 20, C = 1, D = -1;
+            int Min1 = Min(A, B);
+            int Min2 = Min(C, D);
+            int Min3 = Min(Min1, Min2);
+            Console.WriteLine(Min3);
+        }
+        private static int Sign(int X)
+        {
+            if (X < 0)
+            {
+                return -1;
+            }
+
+            if (X == 0)
+            {
+                return 0;
+            }
+            return 1;
+        }
+        private static void Proc16()
+        {
+            int A = -20;
+            A = Sign(A);
+            int B = 20;
+            B = Sign(B);
+            Console.WriteLine(A + B);
+        }
+        private static int RootsCount(int A, int B, int C)
+        {
+            int D = (B * B) - 4 * A * C;
+            if (D > 0)
+            {
+                return 2;
+            }
+            if (D == 0)
+            {
+                return 1;
+            }
+            return 0;
+        }
+        private static void Proc17()
+        {
+            int A1 = 10, B1 = 20, C1 = 300;
+            int A2 = 4, B2 = 50, C2 = 10;
+            int A3 = 4, B3 = 8, C3 = 4;
+            Console.WriteLine(RootsCount(A1, B1, C1));
+            Console.WriteLine(RootsCount(A2, B2, C2));
+            Console.WriteLine(RootsCount(A3, B3, C3));
+        }
+        private static double CircleS(double R)
+        {
+            return Math.PI * (R * R);
+        }
+        private static void Proc18()
+        {
+            double R1 = 1;
+            double R2 = 2;
+            double R3 = 3;
+            double S = CircleS(R1);
+            double S1 = CircleS(R2);
+            double S2 = CircleS(R3);
+            Console.WriteLine(S + " " + S1 + " " + S2);
+        }
+        private static double RingS(double R1, double R2)
+        {
+            return CircleS(R1) - CircleS(R2);
+        }
+        private static void Proc19()
+        {
+            double R1 = 1;
+            double R2 = 2;
+            double R3 = 3;
+            double R4 = 4;
+            double R5 = 5;
+            double R6 = 6;
+            Console.WriteLine(RingS(R2, R1));
+            Console.WriteLine(RingS(R4, R3));
+            Console.WriteLine(RingS(R6, R5));
+        }
+        private static double TriangleP(int a, int h)
+        {
+            double b = ((a / 2.0) * (a / 2.0)) + (h * h);
+            return a + b + a;
+        }
+        private static void Proc20()
+        {
+            int a = 11;
+            int h = 10;
+            Console.WriteLine(TriangleP(a, h));
+        }
+        private static int SumRange(int A, int B)
+        {
+            int Sum = 0;
+            while (A != B)
+            {
+                Sum += A;
+                A++;
+
+            }
+            return Sum + B;
+        }
+        private static void Proc21()
+        {
+            int A = 1;
+            int B = 5;
+            int C = 10;
+            Console.WriteLine(SumRange(A, B));
+            Console.WriteLine(SumRange(B, C));
+        }
+        private static double Calc(double A, double B, int Op)
+        {
+            switch (Op)
+            {
+                case 1:
+                    return A - B;
+                case 2:
+                    return A * B;
+                case 3:
+                    return A / B;
+                default:
+                    return A + B;
+            }
+        }
+        private static void Proc22()
+        {
+            int n1 = 1;
+            int n2 = 2;
+            int n3 = 3;
+            double A = 10;
+            double B = 15;
+            Console.WriteLine(Calc(A, B, n1));
+            Console.WriteLine(Calc(A, B, n2));
+            Console.WriteLine(Calc(A, B, n3));
+        }
+        private static int Quater(int x, int y)
+        {
+            if (x > 0 && y > 0)
+            {
+                return 1;
+            }
+            if (x < 0 && y > 0)
+            {
+                return 2;
+            }
+            if (x < 0 && y < 0)
+            {
+                return 3;
+            }
+            return 4;
+        }
+        private static void Proc23()
+        {
+            int x = -1;
+            int y = 20;
+            int x1 = 1;
+            int y1 = -20;
+            int x2 = 20;
+            int y2 = -1;
+            Console.WriteLine(Quater(x, y));
+            Console.WriteLine(Quater(x1, y1));
+            Console.WriteLine(Quater(x2, y2));
+
+        }
+        private static bool Even(int K)
+        {
+            return K % 2 == 0;
+        }
+        private static void Proc24()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                int x = next.Next();
+                Console.WriteLine(x);
+                if (Even(x))
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+
+        }
+        private static bool IsSquare(int K)
+        {
+            int Current = 0;
+            while ((Current * Current) < K)
+            {
+                Current++;
+                if ((Current * Current) == K)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static void Proc25()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                int x = next.Next(1, 10);
+                Console.WriteLine(x);
+                if (IsSquare(x))
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+        }
+        private static bool isPower5(int K)
+        {
+            int Current = 1;
+            while (Current < K)
+            {
+                Current *= 5;
+                if (K == Current)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static void Proc26()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                int x = next.Next(5, 10);
+                Console.WriteLine(x);
+                if (isPower5(x))
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+        }
+        private static bool IsPowerN(int K, int N)
+        {
+            int current = 1;
+            while (current < K)
+            {
+                current *= N;
+                if (K == current)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static void Proc27()
+        {
+            Random next = new Random();
+            int n = next.Next(1, 5);
+            for (int i = 0; i < 10; i++)
+            {
+                int x = next.Next(1, 100);
+                Console.WriteLine(x);
+                if (IsPowerN(x, n))
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+            if (IsPowerN((n * n), n))
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+
+        }
+        private static bool IsPrime(int N)
+        {
+            int Current = 2;
+            while (Current < (N / 2))
+            {
+                Current++;
+                if (N % Current == 0)
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+        private static void Proc28()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                int x = next.Next(0, 20);
+                Console.WriteLine(x);
+                if (IsPrime(x))
+                {
+                    Console.WriteLine("True");
+                }
+                else
+                {
+                    Console.WriteLine("False");
+                }
+            }
+        }
+        private static int DigitCount(int K)
+        {
+            int Counter = 0;
+            while (K != 0)
+            {
+                K /= 10;
+                Counter++;
+            }
+            return Counter;
+        }
+        private static void Proc29()
+        {
+            Random next = new Random();
+
+            for (int i = 0; i < 5; i++)
+            {
+                int x = next.Next();
+                Console.WriteLine(x);
+                Console.WriteLine(DigitCount(x));
+            }
+        }
+
+        private static int DigitN(int K, int N)
+        {
+            int Counter = 0;
+            int result = 0;
+            if (N > DigitCount(K))
+            {
+                return -1;
+            }
+            while (Counter != N && K != 0)
+            {
+                result = K % 10;
+                K /= 10;
+                Counter++;
+            }
+            return result;
+        }
+        private static void Proc30()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int K = next.Next();
+                for (int N = 1; N <= 5; N++)
+                {
+                    Console.WriteLine(N + " цифра числа " + K + " = " + DigitN(K, N));
+                }
+            }
+        }
+        private static bool IsPolindrom(int K)
+        {
+            for (int i = 1; i <= DigitCount(K) / 2; i++)
+            {
+                if (DigitN(K, i) != DigitN(K, DigitCount(K) - i + 1))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private static void Proc31()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 8; i++)
+            {
+                int K = next.Next();
+                Console.WriteLine(K);
+                Console.WriteLine(IsPolindrom(K) ? "True" : "False");
+            }
+
+            Console.WriteLine(IsPolindrom(12344321) ? "True" : "False");
+            Console.WriteLine(IsPolindrom(1237321) ? "True" : "False");
+        }
+        private static double DegToRad(double D)
+        {
+            return D / (180 / 3.14);
+        }
+        private static void Proc32()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int D = next.Next(0, 360);
+                Console.WriteLine(D + " градусов = " + DegToRad(D) + " радиан");
+            }
+        }
+        private static double RadToDeg(double R)
+        {
+            return R * (180 / 3.14);
+        }
+        private static void Proc33()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                double R = next.NextDouble() * 6.28;
+                Console.WriteLine(R + "радиан" + " = " + RadToDeg(R) + " градусов");
+            }
+        }
+        private static double Fact(int N)
+        {
+            int result = 1;
+            for (int i = 1; i <= N; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+        private static void Proc34()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int N = next.Next(1, 7);
+                Console.WriteLine(N + "! = " + Fact(N));
+            }
+        }
+        private static double Fact2(int N)
+        {
+            int result = 1;
+            for (int i = 1; i <= N; i++)
+            {
+                if (i % 2 == N % 2)
+                {
+                    result *= i;
+                }
+            }
+            return result;
+        }
+        private static void Proc35()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int N = next.Next(1, 7);
+                Console.WriteLine(N + "!! = " + Fact2(N));
+            }
+        }
+        private static int Fib(int N)
+        {
+            int counter = 2;
+            int F = 1;
+            int Fprevious = 1;
+            while (counter != N)
+            {
+                int Temp = F;
+                counter++;
+                F += Fprevious;
+                Fprevious = Temp;
+            }
+            return F;
+        }
+        private static void Proc36()
+        {
+            Random next = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int N = next.Next(0, 15);
+                Console.WriteLine(N + "Fib = " + Fib(N));
+            }
+        }
+        private static double Power1(double A, double B)
+        {
+            if (A <= 0)
+                return 0;
+            return Math.Exp(B * Math.Log(A));
+        }
+        private static void Proc37()
+        {
+            int A = 10;
+            int B = 2;
+            int C = 4;
+            int P = 3;
+            Console.WriteLine(Power1(A, P));
+            Console.WriteLine(Power1(B, P));
+            Console.WriteLine(Power1(C, P));
+        }
+        private static double Power2(double A, int N)
+        {
+            if (N == 0)
+                return 1;
+            double result = 1;
+            for (int i = 0; i < N; i++)
+            {
+                result *= A;
+            }
+            if (N < 0)
+                return 1 / result;
+            return result;
+        }
+        private static void Proc38()
+        {
+            double A = 3.14;
+            int K = 2;
+            int L = 3;
+            int M = 4;
+            Console.WriteLine("A^k " + Power2(A, K) + " A^L " + Power2(A, L) + " A^m " + Power2(A, M));
+        }
+        private static double Power3(double A, double B)
+        {
+            if ((B - Math.Round(B)) == 0)
+                return Power2(A, (int)Math.Round(B));
+            return Power1(A, B);
+        }
+        private static void Proc39()
+        {
+            double P = 2;
+            double A = 2;
+            double B = 3;
+            double C = 4;
+            Console.WriteLine(Power3(A, P));
+            Console.WriteLine(Power3(B, P));
+            Console.WriteLine(Power3(C, P));
+        }
+        private static double Exp1(double x, double e)
+        {
+            double current = 1;
+            double counter = 1;
+            double sum = 0;
+            while (current > e)
+            {
+                current *= x;
+                current /= counter;
+                counter++;
+                sum += current;
+            }
+            return sum;
+        }
+        private static void Proc40()
+        {
+            Random next = new Random();
+            int x = 2;
+            for (int i = 0; i <= 5; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine(e);
+
+                Console.WriteLine(Exp1(x, e));
+            }
+        }
+        private static double Sin1(double x, double e)
+        {
+            double current = x;
+            double counter = 1;
+            double sum = current;
+            while (Math.Abs(current) > e)
+            {
+                current *= (x * x);
+                current /= 2 * counter * (2 * counter + 1);
+                current *= (counter % 2 == 0) ? 1 : -1;
+                sum += current;
+                counter++;
+            }
+            return sum;
+        }
+        private static void Proc41()
+        {
+            Random next = new Random();
+            int x = 2;
+            for (int i = 0; i <= 5; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine(Sin1(x, e));
+            }
+        }
+        private static double Cos1(double x, double e)
+        {
+            double current = 1;
+            double counter = 1;
+            double sum = 1;
+            while (Math.Abs(current) > e)
+            {
+                current *= (x * x);
+                current /= 2 * counter * (2 * counter - 1);
+                current *= (counter % 2 == 0) ? 1 : -1;
+                sum += current;
+                counter++;
+            }
+            return sum;
+        }
+        private static void Proc42()
+        {
+            Random next = new Random();
+            int x = 2;
+            for (int i = 0; i <= 5; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine(Cos1(x, e));
+            }
+        }
+        private static double Ln1(double x, double e)
+        {
+            double current = x;
+            double counter = 1;
+            double sum = current;
+            while (Math.Abs(current) > e)
+            {
+                current *= x;
+                current /= counter + 1;
+                current *= (counter % 2 == 0) ? 1 : -1;
+                sum += current;
+            }
+            return sum;
+        }
+        private static void Proc43()
+        {
+            Random next = new Random();
+            double x = 0.2;
+            for (int i = 0; i <= 5; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine(Ln1(x + 1, e));
+            }
+        }
+        private static double Arctg1(double x, double e)
+        {
+            double current = x;
+            double counter = 1;
+            double sum = current;
+            while (Math.Abs(current) > e)
+            {
+                current *= x * x;
+                sum += current / (2 * counter + 1) * ((counter % 2 == 0) ? 1 : -1);
+            }
+            return sum;
+        }
+        private static void Proc44()
+        {
+            double x = 0.5;
+            Random next = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine("Arctg (" + x + ") = " + Arctg1(x, e));
+            }
+        }
+        private static double Power4(double x, double a, double e)
+        {
+            double current = 1;
+            double counter = 1;
+            double sum = current;
+            while (Math.Abs(current) > e)
+            {
+                current *= (a - counter + 1);
+                current *= x;
+                current /= counter;
+                counter++;
+                sum += current;
+            }
+            return sum;
+
+        }
+        private static void Proc45()
+        {
+            double x = 0.5;
+            double a = 0.6;
+            Random next = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                double e = next.NextDouble();
+                Console.WriteLine(Power4(x, a, e));
+            }
+        }
+        private static int NOD2(int A, int B)
+        {
+            if (B == 0)
+            {
+                return A;
+            }
+
+            return NOD2(B, A % B);
+        }
+        private static void Proc46()
+        {
+            int A = 36;
+            int B = 24;
+            int C = 18;
+            int D = 4;
+            Console.WriteLine("Nod(a, b) " + NOD2(A, B));
+            Console.WriteLine("Nod(a, c) " + NOD2(A, C));
+            Console.WriteLine("Nod(a, d) " + NOD2(A, D));
+
+        }
+        private static double Frac1(int a, int b)
+        {
+            int current = NOD2(a, b);
+            double p = a / current;
+            double q = b / current;
+            return p / q;
+        }
+        private static void Proc47()
+        {
+            int a = 10;
+            int b = 2;
+            int c = 3;
+            int d = 9;
+            int e = 65;
+            int f = 15;
+            int g = 72;
+            int h = 8;
+            Console.WriteLine(Frac1(a, b) + Frac1(c, d));
+            Console.WriteLine(Frac1(a, b) + Frac1(e, f));
+            Console.WriteLine(Frac1(a, b) + Frac1(g, h));
+        }
+        private static double NOK2(int A, int B)
+        {
+            return A * (B / NOD2(A, B));
+        }
+        private static void Proc48()
+        {
+            int A = 20;
+            int B = 15;
+            int C = 10;
+            int D = 5;
+            Console.WriteLine("NOK(A, B) = " + NOK2(A, B));
+            Console.WriteLine("NOK(A, C) = " + NOK2(A, C));
+            Console.WriteLine("NOK(A, D) = " + NOK2(A, D));
+        }
+        private static int NOD3(int a, int b, int c)
+        {
+            return NOD2(NOD2(a, b), c);
+        }
+        private static void Proc49()
+        {
+            int A = 20;
+            int B = 15;
+            int C = 10;
+            int D = 5;
+            Console.WriteLine("NOK(A, B, C) = " + NOD3(A, B, C));
+            Console.WriteLine("NOK(A, C, D) = " + NOD3(A, C, D));
+            Console.WriteLine("NOK(B, C, D) = " + NOD3(B, C, D));
+        }
+        private static bool IsLeapYear(int Y)
+        {
+            return Y % 4 == 0 && (Y % 100 != 0 || Y % 400 == 0);
+        }
+        private static void Proc52()
+        {
+            Console.WriteLine(IsLeapYear(2024));
+        }
+        private static int MonthDays(int M, int Y)
+        {
+            switch (M)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    return 31;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    return 30;
+                case 2:
+                    if (IsLeapYear(Y))
+                    {
+                        return 29;
+                    }
+                    return 28;
+                default:
+                    return 0;
+            }
+
+
+        }
+        private static void Proc53()
+        {
+            int Y = 1895;
+            int m1 = 1;
+            int m2 = 2;
+            int m3 = 3;
+            Console.WriteLine(MonthDays(m1, Y));
+            Console.WriteLine(MonthDays(m2, Y));
+            Console.WriteLine(MonthDays(m3, Y));
+        }
+        private static string PrevDate(int D, int M, int Y)
+        {
+            if (D != 1)
+            {
+                return --D + "." + M + "." + Y;
+            }
+            if (M == 1)
+            {
+                return "31.12." + --Y;
+            }
+            D = MonthDays((M - 1), Y);
+            return D + "." + (M - 1) + "." + Y;
+        }
+        private static void Proc54()
+        {
+            int d = 20;
+            int d2 = 30;
+            int d3 = 1;
+            int m = 1;
+            int m2 = 8;
+            int m3 = 3;
+            int y = 2000;
+            int y2 = 2020;
+            int y3 = 2022;
+            Console.WriteLine(PrevDate(d, m, y));
+            Console.WriteLine(PrevDate(d2, m2, y2));
+            Console.WriteLine(PrevDate(d3, m3, y3));
+        }
+        private static string NextDate(int D, int M, int Y)
+        {
+            if (D == 31 && M == 12)
+            {
+                return D + "." + M + "." + ++Y;
+            }
+            if (D == MonthDays(M, Y))
+            {
+                return 1 + "." + ++M + "." + Y;
+            }
+            return ++D + "." + M + "." + Y;
+        }
+        private static void Proc55()
+        {
+            int d = 20;
+            int d2 = 31;
+            int d3 = 1;
+            int m = 1;
+            int m2 = 8;
+            int m3 = 3;
+            int y = 2000;
+            int y2 = 2020;
+            int y3 = 2022;
+            Console.WriteLine(NextDate(d, m, y));
+            Console.WriteLine(NextDate(d2, m2, y2));
+            Console.WriteLine(NextDate(d3, m3, y3));
+        }
+        private static double Leng(double xa, double ya, double xb, double yb)
+        {
+            return Math.Sqrt(Math.Pow(xa - xb, 2) + Math.Pow(ya - yb, 2));
+        }
+        private static void Proc56()
+        {
+            int xA = 0;
+            int yA = 0;
+            int xB = 3;
+            int yB = 4;
+            int xD = 8;
+            int yD = 9;
+            int xC = 12;
+            int yC = 13;
+            Console.WriteLine(Leng(xA, yA, xB, yB));
+            Console.WriteLine(Leng(xA, yA, xC, yC));
+            Console.WriteLine(Leng(xA, yA, xD, yD));
+        }
+        private static double Perim(double xa, double ya, double xb, double yb, double xc, double yc)
+        {
+            return Leng(xa, ya, xb, yb) + Leng(xb, yb, xc, yc) + Leng(xa, ya, xc, yc);
+        }
+        private static void Proc57()
+        {
+            double xa = 0;
+            double ya = 0;
+            double xb = 8;
+            double yb = 0;
+            double xc = 4;
+            double yc = 3;
+            double xd = 2;
+            double yd = 10;
+            Console.WriteLine(Perim(xa, ya, xb, yb, xc, yc));
+            Console.WriteLine(Perim(xa, ya, xb, yb, xd, yd));
+            Console.WriteLine(Perim(xa, ya, xc, yc, xd, yd));
+        }
+        private static double Area(double xa, double ya, double xb, double yb, double xc, double yc)
+        {
+            double a = Leng(xa, ya, xb, yb);
+            double b = Leng(xa, ya, xc, yc);
+            double c = Leng(xc, yc, xb, yb);
+            double p = (a + b + c) / 2;
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+        private static void Proc58()
+        {
+            double xa = 0;
+            double ya = 0;
+            double xb = 8;
+            double yb = 0;
+            double xc = 4;
+            double yc = 3;
+            double xd = 2;
+            double yd = 10;
+            Console.WriteLine(Area(xa, ya, xb, yb, xc, yc));
+            Console.WriteLine(Area(xa, ya, xb, yb, xd, yd));
+            Console.WriteLine(Area(xa, ya, xc, yc, xd, yd));
+        }
+        private static double Dist(double xp, double yp, double xa, double ya, double xb, double yb)
+        {
+            return 2 * Area(xp, yp, xa, ya, xb, yb) / Leng(xa, ya, xb, yb);
+        }
+        private static void Proc59()
+        {
+            double xa = 0;
+            double ya = 0;
+            double xb = 8;
+            double yb = 0;
+            double xc = 4;
+            double yc = 3;
+            double xp = 2;
+            double yp = 10;
+            Console.WriteLine(Dist(xp, yp, xa, ya, xb, yb));
+            Console.WriteLine(Dist(xp, yp, xa, ya, xc, yc));
+            Console.WriteLine(Dist(xp, yp, xc, yc, xb, yb));
+        }
+        private static string Height(double xa, double ya, double xb, double yb, double xc, double yc)
+        {
+            double ha = Dist(xc, yc, xa, ya, xb, yb), hb = Dist(xa, ya, xb, yb, xc, yc), hc = Dist(xb, yb, xa, ya, xc, yc);
+            return "ha = " + ha + " hb = " + hb + " hc = " + hc;
+
+        }
+        private static void Proc60()
+        {
+            double xa = 0;
+            double ya = 0;
+            double xb = 8;
+            double yb = 0;
+            double xc = 4;
+            double yc = 3;
+            double xd = 2;
+            double yd = 10;
+            Console.WriteLine(Height(xa, ya, xb, yb, xc, yc));
+            Console.WriteLine(Height(xa, ya, xb, yb, xd, yd));
+            Console.WriteLine(Height(xa, ya, xc, yc, xd, yd));
+        }
+    }
+}
