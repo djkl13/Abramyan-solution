@@ -1,0 +1,573 @@
+using System;
+
+namespace If
+{
+    class Program
+    {
+        
+        static void If1()
+        {
+            int a = -1;
+            if (a > 0)
+            {
+                a++;
+            }
+            Console.WriteLine(a);
+        }
+        static void If2()
+        {
+            int a = -1;
+            if (a > 0)
+            {
+                a++;
+            }
+            else
+            {
+                a = a - 2;
+            }
+            Console.WriteLine(a);
+        }
+        static void If3()
+        {
+            int a = 0;
+            if (a > 0)
+            {
+                a++;
+            }
+            else if (a < 0)
+            {
+                a = a - 2;
+
+            }
+            else
+            {
+                a = 10;
+            }
+            Console.WriteLine(a);
+        }
+        static void If4()
+        {
+            int a = -1;
+            int b = 2;
+            int c = 3;
+            int counter = 0;
+            if (a > 0)
+            {
+                counter++;
+            }
+            if (b > 0)
+            {
+                counter++;
+            }
+            if (c > 0)
+            {
+                counter++;
+            }
+            Console.WriteLine(counter);
+        }
+        static void If5()
+        {
+            int a = -1;
+            int b = -2;
+            int c = 3;
+            int counterPositive = 0;
+            int counterNegative = 0;
+            if (a > 0)
+            {
+                counterPositive++;
+            }
+            else
+            {
+                counterNegative++;
+            }
+            if (b > 0)
+            {
+                counterPositive++;
+            }
+            else
+            {
+                counterNegative++;
+            }
+            if (c > 0)
+            {
+                counterPositive++;
+            }
+            else
+            {
+                counterNegative++;
+            }
+            Console.WriteLine(counterPositive + "  " + counterNegative);
+        }
+        static void If6()
+        {
+            int a = 3;
+            int b = 4;
+            if (a > b)
+            {
+                Console.WriteLine(a);
+            }
+            else
+            {
+                Console.WriteLine(b);
+            }
+        }
+        static void If7()
+        {
+            int a = 66;
+            int b = 4;
+            if (a < b)
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(2);
+            }
+        }
+        static void If8()
+        {
+            int a = 2;
+            int b = 3;
+            if (a > b)
+            {
+                Console.WriteLine(a + " " + b);
+            }
+            else
+            {
+                Console.WriteLine(b + " " + a);
+            }
+        }
+        static void If9()
+        {
+            int a = 6;
+            int b = 5;
+            int c = 0;
+            if (a > b)
+            {
+                c = a;
+                a = b;
+                b = c;
+            }
+            Console.WriteLine(a + " " + b);
+
+        }
+        static void If10()
+        {
+            int a = 6;
+            int b = 6;
+            if (a != b)
+            {
+                a = a + b;
+                b = a;
+            }
+            else
+            {
+                a = 0;
+                b = 0;
+            }
+            Console.WriteLine(a + " " + b);
+        }
+        static void If11()
+        {
+            int a = 55;
+            int b = 6;
+            if (a != b)
+            {
+                if (a > b)
+                {
+                    b = a;
+                }
+                else
+                {
+                    a = b;
+                }
+            }
+            else
+            {
+                a = 0;
+                b = 0;
+            }
+            Console.WriteLine(a + " " + b);
+        }
+        static void If12()
+        {
+            int a = 22;
+            int b = 6;
+            int c = 7;
+            if (a < b && a < c)
+            {
+                Console.WriteLine(a);
+            }
+            else if (b < a && b < c)
+            {
+                Console.WriteLine(b);
+            }
+            else if (c < a && c < b)
+            {
+                Console.WriteLine(c);
+            }
+        }
+        static void If13()
+        {
+            int a = 5;
+            int b = 6;
+            int c = 7;
+            if ((a > b && a < c) || (a < b && a > c))
+            {
+                Console.WriteLine(a);
+            }
+            if ((b > a && b < c) || (b < a && b > c))
+            {
+                Console.WriteLine(b);
+            }
+            if ((c > b && c < a) || (c < b && c > a))
+            {
+                Console.WriteLine(c);
+            }
+        }
+        static void If14()
+        {
+            int a = 9;
+            int b = 8;
+            int c = 5;
+            if (a < b && a < c)
+            {
+                Console.WriteLine(a + "  ");
+                if (b > c)
+                {
+                    Console.Write(b);
+                }
+                else
+                {
+                    Console.Write(c);
+                }
+            }
+            else if (b < a && b < c)
+            {
+                Console.WriteLine(b + "  ");
+                if (a > c)
+                {
+                    Console.Write(a);
+                }
+                else
+                {
+                    Console.Write(c);
+                }
+            }
+            else
+            {
+                Console.WriteLine(c + "  ");
+                if (a > b)
+                {
+                    Console.WriteLine(a);
+                }
+                else
+                {
+                    Console.WriteLine(b);
+                }
+            }
+        }
+        static void If15()
+        {
+            int a = 2;
+            int b = 3;
+            int c = 4;
+            if (a < b && a < c)
+            {
+                Console.WriteLine(c + b);
+            }
+            else if (b < c && b < a)
+            {
+                Console.WriteLine(c + a);
+            }
+            else
+            {
+                Console.WriteLine(a + b);
+            }
+        }
+        static void If16()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 3;
+            if (a < b && b < c)
+            {
+                a = a * 2;
+                b = b * 2;
+                c = c * 2;
+            }
+            else
+            {
+                a = -a;
+                b = -b;
+                c = -c;
+            }
+            Console.WriteLine(a + "  " + b + "  " + c + "  ");
+        }
+        static void If17()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 2;
+            if ((a < b && b < c) || (a > b && b > c))
+            {
+                a = a * 2;
+                b = b * 2;
+                c = c * 2;
+            }
+            else
+            {
+                a = -a;
+                b = -b;
+                c = -c;
+            }
+            Console.WriteLine(a + " " + b + " " + c);
+        }
+        static void If18()
+        {
+            int a = 2;
+            int b = 4;
+            int c = 3;
+            if (a == b)
+            {
+                Console.WriteLine(3);
+            }
+            else if (b == c)
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(2);
+            }
+        }
+        static void If19()
+        {
+            int a = 1;
+            int b = 3;
+            int c = 3;
+            int d = 3;
+            if (a != b && a != c)
+            {
+                Console.WriteLine(1);
+            }
+            else if (b != a && b != c)
+            {
+                Console.WriteLine(2);
+            }
+            else if (c != a && c != b)
+            {
+                Console.WriteLine(3);
+            }
+            else
+            {
+                Console.WriteLine(4);
+            }
+        }
+        static void If20()
+        {
+            int a = 2;
+            int b = 3;
+            int c = 4;
+            int ab = Math.Abs(a - b);
+            int ac = Math.Abs(a - c);
+            if (ab > ac)
+            {
+                Console.WriteLine("c" + " " + ac);
+            }
+            else
+            {
+                Console.WriteLine("b" + " " + ab);
+            }
+        }
+        static void If21()
+        {
+            int x = 0;
+            int y = 0;
+            if (x == 0 && y == 0)
+            {
+                Console.WriteLine(0);
+            }
+            else if (y == 0)
+            {
+                Console.WriteLine(1);
+            }
+            else if (x == 0)
+            {
+                Console.WriteLine(2);
+            }
+        }
+        static void If22()
+        {
+            int x = 0;
+            int y = 0;
+            if (x > 0 && y > 0)
+            {
+                Console.WriteLine(1);
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine(2);
+            }
+            else if (x < 0 && y < 0)
+            {
+                Console.WriteLine(3);
+            }
+            else
+            {
+                Console.WriteLine(4);
+            }
+        }
+        static void If23()
+        {
+            int x1 = 0;
+            int y1 = 0;
+            int x2 = 2;
+            int y2 = 0;
+            int x3 = 2;
+            int y3 = -3;
+            if (x2 == x3)
+            {
+                Console.WriteLine("x4 = " + x1 + "y4 = " + y3);
+            }
+            else
+            {
+                Console.WriteLine("x4 = " + x2 + "y4 = " + y1);
+            }
+
+        }
+        static void If24()
+        {
+            int x = -90;
+            double f = 0;
+            if(x > 0)
+            {
+                f = 2 * Math.Sin(x);
+            }
+            else
+            {
+                f = 6 - x;
+            }
+            Console.WriteLine("f(x) = " + f);
+        }
+        static void If25()
+        {
+            int x = -4;
+            if (x < -2 || x > 2)
+            {
+                Console.WriteLine("f(x) = " + (2 * x));
+            }
+            else
+            {
+                Console.WriteLine("f(x) = " + (-3 * x));
+            }
+        }
+        static void If26()
+        {
+            int x = -555;
+            if (x <= 0)
+            {
+                Console.WriteLine("f(x) = " + -x);
+            }
+            else if ((0 < x) && (x < 2))
+            {
+                Console.WriteLine("f(x) = " + (x * x));
+            }
+            else
+            {
+                Console.WriteLine("f(x) = " + 4);
+            }
+        }
+        static void If27()
+        {
+            double x = -1;
+            if (x < 0)
+            {
+                Console.WriteLine("f(x) = " + 0);
+            }
+            else if (Math.Floor(x) % 2 == 0)
+            {
+                Console.WriteLine("f(x) = " + 1);
+            }
+            else
+            {
+                Console.WriteLine("f(x) = " + -1);
+            }
+        }
+        static void If28()
+        {
+            int year = 2020;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            {
+                Console.WriteLine("Number of days = " + 366);
+            }
+            else
+            {
+                Console.WriteLine("Number of days = " + 365);
+            }
+        }
+        static void If29()
+        {
+            int x = 0;
+            if (x == 0)
+            {
+                Console.WriteLine("zero");
+            }
+            else if (x > 0)
+            {
+                Console.WriteLine("positive");
+                if (x % 2 == 0)
+                {
+                    Console.Write(" even");
+                }
+                else
+                {
+                    Console.Write(" odd");
+                }
+            }
+            else
+            {
+                Console.WriteLine("negative");
+                if (x % 2 == 0)
+                {
+                    Console.Write(" even");
+                }
+                else
+                {
+                    Console.Write(" odd");
+                }
+            }
+            Console.Write(" number");
+        }
+        static void If30()
+        {
+            int x = 3;
+            if (x % 2 == 0)
+            {
+                Console.WriteLine("even");
+            }
+            else
+            {
+                Console.WriteLine("odd");
+            }
+            if (x >= 1 && x <= 9)
+            {
+                Console.Write(" one digit");
+            }
+            else if (x >= 10 && x <= 99)
+            {
+                Console.Write(" two digit");
+            }
+            else
+            {
+                Console.Write(" tree digit");
+            }
+            Console.Write(" number");
+        }
+
+        static void Main(string[] args)
+        {
+            If30();
+        }
+    }
+}
