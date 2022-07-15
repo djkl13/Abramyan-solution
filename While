@@ -1,0 +1,408 @@
+using System;
+
+namespace While
+
+{
+    class Program
+    {
+        private static void Main()
+        {
+            While30();
+        }
+        private static void While1()
+        {
+            int A = 100;
+            double B = 33;
+            double Current = 0;
+            while (Current <= A)
+            {
+                Current += B;
+            }
+            Console.WriteLine(A - (Current - B));
+
+        }
+        private static void While2()
+        {
+            int A = 100;
+            int B = 15;
+            int Current = 0;
+            while ((Current * B) <= A)
+            {
+                Current++;
+            }
+            Console.WriteLine(Current - 1);
+        }
+        private static void While3()
+        {
+            int N = 15;
+            int K = 4;
+            int Current = 0;
+            while ((Current * K) <= N)
+            {
+                Current++;
+            }
+            Console.WriteLine("Остаток  = " + (N - (--Current * K)) + " Частное = " + Current);
+        }
+        private static void While4()
+        {
+            int N = 10;
+            int Current = 1;
+            while (Current < N)
+            {
+                Current *= 3;
+            }
+            if (Current == N)
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+        }
+        private static void While5()
+        {
+            int N = 8;
+            int K = 0;
+            while (N % 2 == 0) {
+                N /= 2;
+                K++;
+            }
+
+            Console.WriteLine(K);
+        }
+        private static void While6()
+        {
+            double N = 9;
+            double NFactorial = 1;
+            while (N >= 1)
+            {
+                NFactorial *= N;
+                N = N - 2;
+            }
+            Console.WriteLine(NFactorial);
+
+        }
+        private static void While7()
+        {
+            int N = 20;
+            int K = 0;
+            while (K * K <= N)
+            {
+                K++;
+            }
+            Console.WriteLine(K);
+        }
+        private static void While8()
+        {
+            int N = 9;
+            int K = 0;
+            while (K * K <= N)
+            {
+                K++;
+            }
+            Console.WriteLine(K - 1);
+        }
+        private static void While9()
+        {
+            int N = 9;
+            int K = 0;
+            int Pow = 1;
+            while (Pow <= N)
+            {
+                Pow *= 3;
+                K++;
+            }
+            Console.WriteLine(K);
+        }
+        private static void While10()
+        {
+            int N = 81;
+            int K = 0;
+            int pow = 1;
+            while (pow < N)
+            {
+                pow *= 3;
+                K++;
+            }
+            Console.WriteLine(K - 1);
+        }
+        private static void While11()
+        {
+            int N = 20;
+            int K = 0;
+            int Sum = 0;
+            while (Sum < N)
+            {
+                K++;
+                Sum += K;
+
+            }
+            Console.WriteLine("K = " + K + " " + "Sum = " + Sum);
+
+        }
+        private static void While12()
+        {
+            int N = 20;
+            int K = 0;
+            int Sum = 0;
+            while (Sum <= N)
+            {
+                K++;
+                Sum += K;
+            }
+            Console.WriteLine("K = " + (K - 1) + " " + "Sum = " + (Sum - K));
+        }
+        private static void While13()
+        {
+            int A = 2;
+            int K = 0;
+            double Sum = 0;
+            while (Sum <= A)
+            {
+                K++;
+                Sum += 1.0 / K;
+            }
+            Console.WriteLine("K = " + K + " " + "Sum = " + Sum);
+        }
+        private static void While14()
+        {
+
+            int A = 1;
+            int K = 0;
+            double Sum = 0;
+            while (Sum <= A)
+            {
+                K++;
+                Sum += 1.0 / K;
+            }
+            Console.WriteLine("K = " + (K - 1) + " " + "Sum = " + (Sum - (1 / K)));
+        }
+        private static void While15()
+        {
+            double A = 1000;
+            double P = 0.4;
+            int K = 0;
+            double S = A;
+            while (S < 1100)
+            {
+                K++;
+                S += (S / 100) * P;
+            }
+            Console.WriteLine("Итоговый размер вклада = " + S + " \n" + "Количество месяцев = " + K);
+        }
+        private static void While16()
+        {
+            int N = 10;
+            double P = 0.1;
+            int K = 0;
+            double S = N;
+            while (S < 200)
+            {
+                K++;
+                S += (S / 100) * P;
+            }
+            Console.WriteLine("Итоговое растояние = " + S + " \n" + "Количество дней = " + K);
+        }
+        private static void While17()
+        {
+            int N = 103;
+            while (N != 0)
+            {
+                Console.Write((N % 10) + " ");
+                N = N / 10;
+            }
+
+        }
+        private static void While18()
+        {
+            int N = 12345678;
+            int Sum = 0;
+            int Counter = 0;
+            while (N != 0)
+            {
+                Counter++;
+                Sum += (N % 10);
+                N /= 10;
+            }
+            Console.WriteLine(Counter + " " + Sum);
+        }
+        private static void While19()
+        {
+            int N = 103;
+            while (N != 0)
+            {
+                Console.Write((N % 10));
+                N = N / 10;
+            }
+        }
+        private static void While20()
+        {
+            int n = 111;
+            while (n != 0)
+            {
+                if (n % 10 == 2)
+                {
+                    Console.WriteLine("True");
+                    return;
+                }
+                n /= 10;
+            }
+            Console.WriteLine("False");
+        }
+        private static void While21()
+        {
+            int n = 122;
+            while (n != 0)
+            {
+                if ((n % 10) % 2 == 1)
+                {
+                    Console.WriteLine("True");
+                    return;
+                }
+                n /= 10;
+            }
+            Console.WriteLine("False");
+        }
+        private static void While22()
+        {
+            int n = 17;
+            int a = 2;
+            while (a < (n / 2))
+            {
+                if (n % a == 0)
+                {
+                    Console.WriteLine("False");
+                    return;
+                }
+                a++;
+            }
+            Console.WriteLine("True");
+        }
+        private static void While23()
+        {
+            int A = 24;
+            int B = 6;
+            while (B != 0)
+            {
+                int Temp = B;
+                B = A % B;
+                A = Temp;
+            }
+            Console.WriteLine(A);
+        }
+        private static void While24()
+        {
+            int N = 10;
+            int F = 1;
+            int Fprevious = 1;
+            while (F <= N)
+            {
+                int Temp = F;
+                F += Fprevious;
+                Fprevious = Temp;
+                if (N == F)
+                {
+                    Console.WriteLine("True");
+                    return;
+                }
+            }
+            Console.WriteLine("false");
+        }
+        private static void While25()
+        {
+            int N = 10945;
+            int F = 1;
+            int Fprevious = 1;
+            while (F <= N)
+            {
+                int Temp = F;
+                F += Fprevious;
+                Fprevious = Temp;
+
+            }
+            Console.WriteLine(F);
+        }
+        private static void While26()
+        {
+            int N = 10;
+            int F = 1;
+            int Fprevious = 1;
+            while (F <= N)
+            {
+                int Temp = F;
+                F += Fprevious;
+                Fprevious = Temp;
+
+            }
+            Console.WriteLine("Fk - 1 = " + Fprevious); ;
+            Console.WriteLine("Fk + 1 = " + (F + Fprevious));
+        }
+        private static void While27()
+        {
+            int N = 13;
+            int F = 1;
+            int Fprevious = 1;
+            int i = 2;
+            while (F <= N)
+            {
+                int Temp = F;
+                F += Fprevious;
+                Fprevious = Temp;
+                i++;
+            }
+            Console.WriteLine(i);
+        }
+        private static void While28()
+        {
+            double E = 0.1;
+            int K = 2;
+            double previous = 2;
+            double current = 2 + 1 / previous;
+            while (Math.Abs(current - previous) > E)
+            {
+                K++;
+                previous = current;
+                current = 2 + 1 / previous;
+            }
+            Console.WriteLine(current);
+            Console.WriteLine(previous);
+            Console.WriteLine(K);
+        }
+        private static void While29()
+        {
+            double E = 0.01;
+            int K = 3;
+            double A = 2;
+            double Aprevious = 1;
+            while (Math.Abs(A - Aprevious) > E)
+            {
+                K++;
+                double Temp = A;
+                A = (Aprevious + 2 * A) / 3;
+                Aprevious = Temp;
+            }
+            Console.WriteLine(K);
+            Console.WriteLine(Aprevious);
+            Console.WriteLine(A);
+
+        }
+        private static void While30()
+        {
+            int A = 5;
+            int B = 10;
+            int C = 3;
+            int sLength = 0;
+            int sWidth = 0;
+            while (sWidth < A)
+            {
+                    sLength += C;
+            }
+            while(sLength < B)
+            {
+                    sWidth += C;
+            }
+            Console.WriteLine((sLength / C) * (sWidth / C));
+        }
+    }
+}
