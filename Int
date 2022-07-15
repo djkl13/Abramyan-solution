@@ -1,0 +1,128 @@
+using System;
+
+namespace ConsoleApp23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int10();
+        }
+        static void int1()
+        {
+            int L = 500;
+            int Lm = L / 100;
+            Console.WriteLine("Lm:" + Lm);
+        }
+        static void int2()
+        {
+            double M = 1000;
+            double T = M / 1000;
+            Console.WriteLine(M + " " + T);
+        }
+        static void int3()
+        {
+            int B = 2048;
+            double Kb = B / 1024;
+            Console.WriteLine(B + " " + Kb);
+        }
+        static void int4()
+        {
+            int a = 16;
+            int b = 4;
+            Console.WriteLine(a / b);
+        }
+        static void int5()
+        {
+            int a = 10;
+            int b = 5;
+            if (a > b)
+            {
+                Console.WriteLine(a % b);
+            }
+        }
+        static void int6()
+        {
+            int num = 11;
+            int ones = num / 10;
+            int tens = num % 10;
+            Console.WriteLine(ones + " " + tens);
+
+        }
+        static void int7()
+        {
+            int num = 48;
+            int ones = num / 10;
+            int tens = num % 10;
+            int sum = ones + tens;
+            int multi = ones * tens;
+            Console.WriteLine(sum + " " + multi);
+        }
+        static void int8()
+        {
+            int xy = 22;
+            int yx = xy / 10 + xy % 10 * 10;
+            Console.WriteLine(xy + " " + yx);
+        }
+        static void int9()
+        {
+            int num = 123;
+            int hundreds = num / 100;
+            Console.WriteLine(num + " " + hundreds);
+        }
+        static void int10()
+        {
+            int num = 123;
+            int ones = num % 10;
+            int tens = num % 100 / 10;
+            Console.WriteLine(num + " " + ones + " " + tens);
+        }
+        static void int11()
+        {
+            int num = 123;
+            int ones = num / 10;
+            int tens = num % 10;
+            int hundreds = num / 100;
+            int sum = ones + tens + hundreds;
+            int multi = ones * tens * hundreds;
+            Console.WriteLine(sum + " " + multi);
+        }
+        static void int12()
+        {
+            int xyz = 123;
+            int zyx = (xyz % 10) * 100 + (xyz % 100 / 10) * 10 + (xyz / 100);
+            Console.WriteLine(xyz + " " + zyx);
+        }
+        static void int13()
+        {
+            int xyz = 123;
+            int zyx = (xyz % 100 / 10 * 100) + (xyz % 10) * 10 + xyz / 100;
+            Console.WriteLine(xyz + " " + zyx);
+        }
+        static void int14()
+        {
+            int xyz = 123;
+            int zyx = (xyz % 10) * 100 + (xyz / 100) * 10 + (xyz % 100 / 10);
+            Console.WriteLine(xyz + " " + zyx);
+        }
+        static void int15()
+        {
+            int xyz = 123;
+            int hundreds = xyz / 100;
+            int tens = (xyz / 10) % 10;
+            int ones = xyz % 10;
+            int yxz = tens * 100 + hundreds * 10 + ones;
+        }
+        static void int16()
+        {
+            int year = 1820;
+            int century = (year / 100) + 1;
+            if (year % 100 == 0)
+            {
+                century--;
+            }
+            Console.WriteLine(year + "  " + century);
+        }
+
+    }
+}
